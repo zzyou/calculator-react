@@ -5,11 +5,11 @@ class Button extends Component {
         const buttonThis = this;
 
         const rows = [
-            ['C', 'CE', 'log', 'x'], 
-            [7, 8, 9, '/'], 
-            [4, 5, 6, '+'], 
-            [1, 2, 3, '-'], 
-            ['.', 0, '**', '=']
+            ['AC', 'C', '%', 'x'], 
+            ['7', '8', '9', '÷'], 
+            ['4', '5', '6', '+'], 
+            ['1', '2', '3', '-'], 
+            ['.', '0', '^', '=']
         ];
 
         function createRows(rows) {
@@ -28,7 +28,7 @@ class Button extends Component {
                         <button 
                         className='bt' 
                         value={value} 
-                        key={value} 
+                        key={value}
                         id={value} 
                         onClick={buttonThis.props.onClick}>
                             {value}

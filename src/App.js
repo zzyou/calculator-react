@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Button from './Button';
+import calculation from './calculation';
 
 class App extends Component {
   constructor(props) {
@@ -11,11 +12,14 @@ class App extends Component {
   }
 
   handleClick(e) {
-    let currState = this.state.result;
-    this.setState({
-      result: e.target.value
-    });
-    console.log(currState);
+    if (/[0-9]|'.'/.test(e.target.value)) {
+      this.setState({
+        result: this.state.result.concat(e.target.value)
+      });
+    }
+    else {
+      this.setState(calculation(e.target.value, this.state.result));
+    }
   }
 
   render() {
