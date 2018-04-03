@@ -2,20 +2,36 @@ import React, { Component } from 'react';
 
 class Button extends Component {
     render() {
-        const valueRowOne = ['C', 'CE', 'log', 'x'];
-        const valueRowTwo = [7, 8, 9, '/'];
-        const valueRowThree = [4, 5, 6, '+'];
-        const valueRowFour = [1, 2, 3, '-'];
-        const valueRowFive = ['.', 0, '**', '='];
         const buttonThis = this;
 
-        function createRow(valueRow) {
+        const rows = [
+            ['C', 'CE', 'log', 'x'], 
+            [7, 8, 9, '/'], 
+            [4, 5, 6, '+'], 
+            [1, 2, 3, '-'], 
+            ['.', 0, '**', '=']
+        ];
+
+        function createRows(rows) {
+            return (
+                <div>
+                    {rows.map(row => createRow(row))}
+                </div>
+            )
+        }
+        
+        function createRow(row) {
             return (
                 <div className='row'>
-                    {valueRow.map(value => {
+                    {row.map(value => {
                     return (
-                        <button className='bt' value={value} key={value} id={value} onClick={buttonThis.props.onClick}>
-                        {value}
+                        <button 
+                        className='bt' 
+                        value={value} 
+                        key={value} 
+                        id={value} 
+                        onClick={buttonThis.props.onClick}>
+                            {value}
                         </button>
                     )
                     })}
@@ -23,15 +39,7 @@ class Button extends Component {
             )
         }
 
-        return (
-            <div>
-                {createRow(valueRowOne)}
-                {createRow(valueRowTwo)}
-                {createRow(valueRowThree)}
-                {createRow(valueRowFour)}
-                {createRow(valueRowFive)}
-            </div>
-        );
+        return createRows(rows);
     }
 };
 
