@@ -8,7 +8,6 @@ class App extends Component {
     super(props);
     this.state = {result: ''};
     this.handleClick = this.handleClick.bind(this);
-    this.handleDisplay = this.handleDisplay.bind(this);
   }
 
   handleClick(e) {
@@ -16,10 +15,7 @@ class App extends Component {
     this.setState({
       result: e.target.value
     });
-  }
-
-  handleDisplay() {
-    this.value = this.state.result;
+    console.log(currState);
   }
 
   render() {
