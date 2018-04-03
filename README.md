@@ -1,2 +1,2 @@
 # Calculator React
-Create a calculator using React.js
+Create a calculator using Create-React-App (React.js).

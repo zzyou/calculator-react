@@ -1,5 +1,8 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  color: rgba(28,97,97,.6);
+  font-size: 40px;
+  font-family: 'Volkhov', serif;
+  text-align: center;
+  background: linear-gradient(45deg, rgb(230, 249, 255), rgba(71,249,249,.2));
 }
+
