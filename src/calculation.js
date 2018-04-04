@@ -12,7 +12,9 @@ function calculation(value, state) {
 
   for (let i = 0; i < result.length; i++) {
 
-    if ( (isNaN(parseFloat(result[i]))) && (result[i] !== ".") && (i !== result.length - 1) ) {
+    if ( (isNaN(parseFloat(result[i]))) 
+      && (result[i] !== ".") 
+      && (i !== result.length - 1) ) {
 
       let operator = result[i];
       num1 = parseFloat(result.slice(0, i));

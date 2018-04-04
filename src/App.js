@@ -17,19 +17,30 @@ class App extends Component {
         result: this.state.result.concat(e.target.value)
       });
     }
+    
     else {
-      this.setState(calculation(e.target.value, this.state.result));
+      this.setState(
+        calculation(e.target.value, this.state.result)
+      );
     }
   }
 
   render() {
     return (
       <div className="App">
+
         <header className="App-header">
-          <h1 className="App-title">Welcome to My Calculator</h1>
+          <h1 className="App-title">
+            Welcome to My Calculator
+          </h1>
         </header>
-        <div id='input'>{this.state.result}</div>
+
+        <div id='input'>
+          {this.state.result}
+        </div>
+
         <Button onClick={this.handleClick} />
+
       </div>
     );
   }
