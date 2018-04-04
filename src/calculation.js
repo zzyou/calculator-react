@@ -56,7 +56,7 @@ function calculation(value, state) {
       }
 
       else if (operator === 'x') {
-        finalNum = num1 * num2;
+        finalNum = Math.round( (num1 * num2) * 100 ) / 100;
       }
 
       else if (operator === '%') {
@@ -64,7 +64,7 @@ function calculation(value, state) {
       }
 
       else if (operator === '^')  {
-        finalNum = Math.pow(num1, num2);
+        finalNum = Math.round( Math.pow(num1, num2) * 100 ) / 100;
       }
 
       if (finalOperator === '=') {
