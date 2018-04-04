@@ -22,13 +22,13 @@ class Button extends Component {
         
         function createRow(row) {
             return (
-                <div className='row'>
+                <div className='row' key={rows.indexOf(row).toString()}>
                     {row.map(value => {
                         return (
                             <button 
                                 className='bt' 
                                 value={value} 
-                                key={value}
+                                key={value.toString()}
                                 id={value} 
                                 onClick={buttonThis.props.onClick}>
                                     {value}
