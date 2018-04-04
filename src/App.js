@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   handleClick(e) {
-    if (/[0-9]|'.'/.test(e.target.value)) {
+    if (/[0-9]/.test(e.target.value)) {
       this.setState({
         result: this.state.result.concat(e.target.value)
       });
@@ -35,7 +35,7 @@ class App extends Component {
           </h1>
         </header>
 
-        <div id='input'>
+        <div id="input">
           {this.state.result}
         </div>
 
