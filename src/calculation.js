@@ -33,6 +33,12 @@ function calculation(value, state) {
       num1 = parseFloat(result.slice(0, i));
       num2 = parseFloat(result.slice(i + 1, result.length - 1));
 
+      if (isNaN(num2)) {
+        return {
+          result: num1.toString().concat(operator)
+        }
+      }
+
       if (operator === '=') {
         finalNum = num2;
       }
@@ -62,16 +68,16 @@ function calculation(value, state) {
       }
 
       if (finalOperator === '=') {
-        state = finalNum.toString();
+        result = finalNum.toString();
         return {
-          result: state
+          result: result
         };
       }
 
       else {
-        state = finalNum.toString().concat(finalOperator);
+        result = finalNum.toString().concat(finalOperator);
         return {
-          result: state
+          result: result
         };
       } 
     }
