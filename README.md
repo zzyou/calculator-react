@@ -1,4 +1,4 @@
-# Calculator React
+# React Calculator
 Create a calculator using Create-React-App (React.js).
 
 After cloning this repo, follow the following steps in Terminal:
