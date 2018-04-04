@@ -26,12 +26,12 @@ class Button extends Component {
                     {row.map(value => {
                         return (
                             <button 
-                            className='bt' 
-                            value={value} 
-                            key={value}
-                            id={value} 
-                            onClick={buttonThis.props.onClick}>
-                                {value}
+                                className='bt' 
+                                value={value} 
+                                key={value}
+                                id={value} 
+                                onClick={buttonThis.props.onClick}>
+                                    {value}
                             </button>
                         )
                     })}
