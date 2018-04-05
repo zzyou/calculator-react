@@ -1,5 +1,5 @@
 # React Calculator
-Create a calculator using `Create React App` (React.js).
+Create a calculator using `Create React App` (ReactJS).
 
 After cloning this repo, follow the following steps in Terminal:
 1. `cd calculator-react`, change directory to this folder.
