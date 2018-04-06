@@ -5,6 +5,22 @@ function calculation(value, state) {
     };
   }
 
+  // number input won't hit this function in App.js, 
+  // so I do not expect number input here.
+  // But I still expect negative numbers and decimals.
+  if (state === '' && value !== '-' && value !=='.') {
+    return {
+      result: ''
+    };
+  }
+
+  // except negative number, I do not expect multiple operators here.
+  if (state === '-' && isNaN(value)) {
+    return {
+      result: '-'
+    }
+  }
+
   let result = state.concat(value);
   
   if (value === '.') {
@@ -17,7 +33,7 @@ function calculation(value, state) {
       result: result
     };
   }
-
+  
   let num1;
   let num2;
   let finalNum;
@@ -26,6 +42,7 @@ function calculation(value, state) {
 
     if ( (isNaN(parseFloat(result[i]))) 
       && (i !== result.length - 1)
+      && (i !== 0)
       && (result[i] !== '.') ) {
 
       let operator = result[i];
