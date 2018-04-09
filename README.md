@@ -9,4 +9,4 @@ After cloning this repo, follow the following steps in Terminal:
 Now the calculator should show in your browser (`localhost:3000`)
 
 Or, you can directly access my React Calculator here:
-<a href='https://zzyou.github.io/calculator-react/'>https://zzyou.github.io/calculator-react/</a>
+- <a href='https://zzyou.github.io/calculator-react/'>https://zzyou.github.io/calculator-react/</a>
