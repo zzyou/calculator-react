@@ -1,5 +1,5 @@
 # React Calculator
-Create a calculator using `Create React App` (ReactJS).
+Create a calculator using React.
 
 
 ## Set Up
